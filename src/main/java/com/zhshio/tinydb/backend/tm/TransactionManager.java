@@ -1,6 +1,6 @@
 package com.zhshio.tinydb.backend.tm;
 
-import com.zhshio.tinydb.backend.common.Error;
+import com.zhshio.tinydb.commob.Error;
 import com.zhshio.tinydb.backend.utils.Panic;
 
 import java.io.File;
@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.util.RandomAccess;
 
 /**
  * @Auther: 张帅

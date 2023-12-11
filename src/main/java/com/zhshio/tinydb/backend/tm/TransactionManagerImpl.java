@@ -5,7 +5,7 @@ package com.zhshio.tinydb.backend.tm;/**
  * @version: 1.0
  */
 
-import com.zhshio.tinydb.backend.common.Error;
+import com.zhshio.tinydb.commob.Error;
 import com.zhshio.tinydb.backend.utils.Panic;
 import com.zhshio.tinydb.backend.utils.Parser;
 
@@ -13,8 +13,6 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.util.Random;
-import java.util.RandomAccess;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -103,7 +101,7 @@ public class TransactionManagerImpl implements TransactionManager{
     @Override
     public boolean isCommitted(long xid) {
         if (xid == SUPER_XID) {
-            return false;
+            return true;
         }
         return checkXID(xid, FIELD_TRAN_COMMITTED);
     }
